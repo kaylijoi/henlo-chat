@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const PREFIX = 'henlo-'
+const PREFIX = 'whatsapp-clone-'
 
 export default function useLocalStorage(key, initialValue) {
   const prefixedKey = PREFIX + key
@@ -17,7 +17,8 @@ export default function useLocalStorage(key, initialValue) {
   useEffect(() => {
     localStorage.setItem(prefixedKey, JSON.stringify(value))
   }, [prefixedKey, value])
-  
+
   return [value, setValue]
 }
+
 
